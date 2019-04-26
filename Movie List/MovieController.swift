@@ -1,0 +1,28 @@
+//
+//  MovieController.swift
+//  Movie List
+//
+//  Created by Hector Steven on 4/26/19.
+//  Copyright © 2019 Lambda School. All rights reserved.
+//
+
+import Foundation
+
+class MovieController {
+	
+	func createMovie (movie: String){
+		let movie = Movie(movie: movie)
+		movies.append(movie)
+	}
+	
+	func update (movie: Movie, isLiked: Bool?, name: String?) {
+		print("update Movie")
+	}
+	
+	init() {
+		createMovie(movie: "The Matrix")
+		createMovie(movie: "The Lord of the Rings")
+	}
+	
+	var movies: [Movie] = []
+}
