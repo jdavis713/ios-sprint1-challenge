@@ -10,7 +10,9 @@ import UIKit
 
 class MoviesTableViewController: UITableViewController, MoviesControllerProtocol, MovieTableViewCellDelegate {
 	func isSeenButton(for cell: MovieTableViewCell) {
-		print("Delegate")
+		guard let movie = cell.movie else { return }
+		moviesController?.updateLike(movie: movie)
+		tableView.reloadData()
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -33,7 +35,7 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
 		
 		guard let movieCell = cell as? MovieTableViewCell else { return  cell }
-		
+		movieCell.delegate = self
 		if let movie = moviesController?.movies[indexPath.row] {
 			movieCell.movie = movie
 		}

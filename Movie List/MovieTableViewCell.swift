@@ -16,6 +16,7 @@ class MovieTableViewCell: UITableViewCell {
 	
 	@IBAction func IsSeenButtonAction(_ sender: Any) {
 		//delegate not working
+		print("delegate Entry")
 		delegate?.isSeenButton(for: self)
 	}
 	

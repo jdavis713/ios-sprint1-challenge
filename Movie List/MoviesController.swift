@@ -14,6 +14,7 @@ class MoviesController {
 		let movie = Movie(movie: movie)
 		movies.append(movie)
 	}
+	
 	func deleteMovie(movie: Movie) {
 		guard let i = movies.firstIndex(of: movie) else { return }
 		movies.remove(at: i)
