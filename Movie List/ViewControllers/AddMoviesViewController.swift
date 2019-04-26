@@ -9,10 +9,8 @@
 import UIKit
 
 class AddMoviesViewController: UIViewController, MoviesControllerProtocol {
-	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		
     }
 	
 	@IBAction func AddmovieButtonAction(_ sender: Any) {
@@ -22,7 +20,6 @@ class AddMoviesViewController: UIViewController, MoviesControllerProtocol {
 		}
 		movieTextField?.text = nil
 	}
-	
 	
 	@IBOutlet var movieTextField: UITextField!
 	var moviesController: MoviesController?

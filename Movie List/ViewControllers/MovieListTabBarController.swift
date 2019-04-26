@@ -20,7 +20,5 @@ class MovieListTabBarController: UITabBarController {
 		}
     }
 	
-	
     let moviesController = MoviesController()
-
 }

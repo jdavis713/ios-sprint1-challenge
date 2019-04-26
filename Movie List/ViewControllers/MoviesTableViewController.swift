@@ -18,9 +18,6 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		tableView.reloadData()
-		for m in moviesController!.movies {
-			print(m)
-		}
 	}
 
     override func viewDidLoad() {
@@ -48,7 +45,6 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 			guard let movie = moviesController?.movies[indexPath.row] else { return }
 			moviesController?.deleteMovie(movie: movie)
 		}
-
 		tableView.reloadData()
 	}
 	
