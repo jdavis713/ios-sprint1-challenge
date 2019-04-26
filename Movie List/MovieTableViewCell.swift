@@ -9,6 +9,10 @@
 import UIKit
 
 class MovieTableViewCell: UITableViewCell {
-
-
+	
+	@IBOutlet var movieNameLabel: UILabel!
+	@IBOutlet var IsSeenButtonTitle: UIButton!
+	
+	@IBAction func IsSeenButtonAction(_ sender: Any) {
+	}
 }
