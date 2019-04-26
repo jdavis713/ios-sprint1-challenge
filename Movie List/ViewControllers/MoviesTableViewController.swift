@@ -54,7 +54,10 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 		let edit = UITableViewRowAction(style: .normal, title: "edit", handler: {
 			action, index in
 			
-			
+			let ac = UIAlertController(title: "Edit Movie", message: nil, preferredStyle: .alert)
+		
+			ac.addAction(UIAlertAction(title: "ok", style: .default))
+			self.present(ac, animated: true)
 		})
 		
 		return [delete, edit]

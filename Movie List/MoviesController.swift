@@ -24,7 +24,6 @@ class MoviesController {
 	func updateLike(movie: Movie) {
 		if let i = getMovieIndex(movie) {
 			movies[i].isSeen?.toggle()
-			
 		}
 	}
 	
