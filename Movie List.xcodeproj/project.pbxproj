@@ -54,14 +54,22 @@
 		467E198B20F5165700E7FF73 /* Movie List */ = {
 			isa = PBXGroup;
 			children = (
-				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
-				467E199320F5165900E7FF73 /* Assets.xcassets */,
-				467E199820F5165900E7FF73 /* Info.plist */,
-				467E199020F5165800E7FF73 /* Main.storyboard */,
+				E84C0F7E227359560009D06A /* Storyboards */,
 				8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */,
-				8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */,
+				467E199320F5165900E7FF73 /* Assets.xcassets */,
+				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
+				467E199820F5165900E7FF73 /* Info.plist */,
 			);
 			path = "Movie List";
+			sourceTree = "<group>";
+		};
+		E84C0F7E227359560009D06A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				467E199020F5165800E7FF73 /* Main.storyboard */,
+				8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
