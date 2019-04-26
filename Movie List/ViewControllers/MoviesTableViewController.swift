@@ -8,13 +8,15 @@
 
 import UIKit
 
-class MoviesTableViewController: UITableViewController, MoviesControllerProtocol, MovieTableViewCellDelegate {
+extension MoviesTableViewController: MovieTableViewCellDelegate {
 	func isSeenButton(for cell: MovieTableViewCell) {
 		guard let movie = cell.movie else { return }
 		moviesController?.updateLike(movie: movie)
 		tableView.reloadData()
 	}
-	
+}
+
+class MoviesTableViewController: UITableViewController, MoviesControllerProtocol {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		tableView.reloadData()
@@ -41,23 +43,22 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
     }
 
 	override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-		let delete = UITableViewRowAction(style: .destructive, title: "delete", handler: {
-			action, index in
-			print("Delete button")
+		let delete = UITableViewRowAction(style: .destructive, title: "delete", handler: { action, index in
 			
 			if let movie = self.moviesController?.movies[indexPath.row] {
 				self.moviesController?.deleteMovie(movie: movie)
 				self.tableView.reloadData()
 			}
+			
 		})
 	
-		let edit = UITableViewRowAction(style: .normal, title: "edit", handler: {
-			action, index in
+		let edit = UITableViewRowAction(style: .normal, title: "edit", handler: { action, index in
 			
 			let ac = UIAlertController(title: "Edit Movie", message: nil, preferredStyle: .alert)
 			ac.addTextField()
-			ac.addAction(UIAlertAction(title: "ok", style: .default) {
-				[weak self] _ in
+			
+			let editAciton = UIAlertAction(title: "ok", style: .default) { [weak self] _ in
+			
 				if let textFields = ac.textFields {
 					if let str = textFields[0].text,
 						let movie = self!.moviesController?.movies[indexPath.row] {
@@ -65,8 +66,9 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 					}
 				}
 				self?.tableView.reloadData()
-				
-			})
+			}
+			
+			ac.addAction(editAciton)
 			self.present(ac, animated: true)
 		})
 		
