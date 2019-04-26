@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol MovieDelegate {
+    func newMovieWasAdded(with movie: Movie)
+}
+
 class MovieTableViewController: UITableViewController {
 
     var movieController: MovieController?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,5 +41,11 @@ class MovieTableViewController: UITableViewController {
         cell.textLabel?.text = movie?.nameOfMovie
 
         return cell
+    }
+}
+
+extension MovieTableViewController: MovieDelegate {
+    func newMovieWasAdded(with movie: Movie) {
+        movieController?.movies.append(movie)
     }
 }

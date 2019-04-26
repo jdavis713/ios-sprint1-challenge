@@ -108,21 +108,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Movies" image="Clapboard" id="XE8-I7-HS6"/>
-                    <connections>
-                        <segue destination="yi9-51-bjp" kind="show" identifier="MovieTable" id="Ix0-9z-cs0"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xnb-SR-bOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713.0434782608697" y="33.482142857142854"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="gRX-uI-QOK">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="yi9-51-bjp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UK0-TW-JDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2389" y="-157"/>
+            <point key="canvasLocation" x="1757" y="35"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kZl-m8-Kev">

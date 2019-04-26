@@ -8,10 +8,11 @@
 
 import UIKit
 
-class AddMovieViewController: UIViewController {
-
+class AddMovieViewController: UIViewController, MoviePresenter {
+    
     var movieController: MovieController?
     var moviesTableViewController: MovieTableViewController?
+    var delegate: MovieDelegate?
     
     @IBOutlet weak var addMovieTextField: UITextField!
     @IBAction func addMovieButtonPressed(_ sender: Any) {
@@ -37,3 +38,4 @@ class AddMovieViewController: UIViewController {
         }
     }
 }
+
