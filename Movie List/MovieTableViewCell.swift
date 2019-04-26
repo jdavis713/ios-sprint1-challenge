@@ -11,12 +11,13 @@ import UIKit
 class MovieTableViewCell: UITableViewCell {
 	
 	@IBAction func IsSeenButtonAction(_ sender: Any) {
+		print("hello")
 	}
 	
 	private func setupCell() {
 		guard let movie = movie else { return }
 		movieNameLabel?.text = movie.movie
-		let buttonTitle = movie.isSeen ? "Seen" : "Not Seen"
+		let buttonTitle = movie.isSeen! ? "Seen" : "Not Seen"
 		IsSeenButtonTitle.setTitle(buttonTitle, for: .normal)
 	}
 	

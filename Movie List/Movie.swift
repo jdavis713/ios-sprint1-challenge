@@ -9,12 +9,12 @@
 import Foundation
 
 
-class Movie {
-	init(movie: String, isSeen: Bool = false) {
+struct Movie: Equatable {
+	init(movie: String, isSeen: Bool? = false) {
 		self.movie = movie
 		self.isSeen = isSeen
 	}
 	
 	var movie: String
-	var isSeen: Bool
+	var isSeen: Bool?
 }

@@ -14,6 +14,10 @@ class MoviesController {
 		let movie = Movie(movie: movie)
 		movies.append(movie)
 	}
+	func deleteMovie(movie: Movie) {
+		guard let i = movies.firstIndex(of: movie) else { return }
+		movies.remove(at: i)
+	}
 	
 	func update (movie: Movie, isLiked: Bool?, name: String?) {
 		print("update Movie")

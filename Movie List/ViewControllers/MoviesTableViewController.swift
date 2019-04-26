@@ -32,7 +32,15 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
         return movieCell
     }
 	
-
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			guard let movie = moviesController?.movies[indexPath.row] else { return }
+			moviesController?.deleteMovie(movie: movie)
+		} else if editingStyle == .insert {
+			
+		}
+		tableView.reloadData()
+	}
 	
 
 }
