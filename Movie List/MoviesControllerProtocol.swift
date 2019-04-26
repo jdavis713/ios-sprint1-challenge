@@ -1,5 +1,5 @@
 //
-//  MovieControllerProtocol.swift
+//  MoviesControllerProtocol.swift
 //  Movie List
 //
 //  Created by Hector Steven on 4/26/19.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol MovieControllerProtocol: AnyObject{
-	var moviController: MoviesController? { set get }
+
+protocol MoviesControllerProtocol: AnyObject{
+	var moviesController: MoviesController? { set get }
 }

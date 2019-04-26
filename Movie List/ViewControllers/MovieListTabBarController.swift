@@ -12,9 +12,13 @@ class MovieListTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		for childViewController in children {
+			if let childVC = childViewController as? MoviesControllerProtocol {
+				childVC.moviesController = moviesController
+			}
+		}
     }
-	
-	
 	
 	
     let moviesController = MoviesController()
