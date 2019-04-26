@@ -8,11 +8,16 @@
 
 import UIKit
 
-
+protocol isSeenCellDelegate: AnyObject {
+	func isSeenButton(for cell: MovieTableViewCell)
+}
 
 class MovieTableViewCell: UITableViewCell {
 	
 	@IBAction func IsSeenButtonAction(_ sender: Any) {
+		delegate?.isSeenButton(for: self)
+		
+		
 		movie?.isSeen?.toggle()
 		setupCell()
 	}
@@ -26,6 +31,8 @@ class MovieTableViewCell: UITableViewCell {
 	
 	@IBOutlet var movieNameLabel: UILabel!
 	@IBOutlet var IsSeenButtonTitle: UIButton!
+	
+	weak var delegate: isSeenCellDelegate?
 	
 	var movie: Movie? {
 		didSet {

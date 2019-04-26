@@ -8,7 +8,14 @@
 
 import UIKit
 
-class MoviesTableViewController: UITableViewController, MoviesControllerProtocol {
+class MoviesTableViewController: UITableViewController, MoviesControllerProtocol, isSeenCellDelegate {
+	func isSeenButton(for cell: MovieTableViewCell) {
+		print("Delegate")
+	}
+	
+
+	
+	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		tableView.reloadData()
