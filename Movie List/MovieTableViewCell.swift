@@ -17,6 +17,9 @@ class MovieTableViewCell: UITableViewCell {
 	@IBAction func IsSeenButtonAction(_ sender: Any) {
 		delegate?.seenButtonDelegate(for: self)
 		print("delegate1")
+		
+		movie?.isSeen?.toggle()
+		setupCell()
 	}
 	
 	private func setupCell() {
