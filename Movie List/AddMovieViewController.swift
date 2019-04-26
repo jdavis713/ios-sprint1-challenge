@@ -11,6 +11,7 @@ import UIKit
 class AddMovieViewController: UIViewController {
 
     var movieController: MovieController?
+    var moviesTableViewController: MovieTableViewController?
     
     @IBOutlet weak var addMovieTextField: UITextField!
     @IBAction func addMovieButtonPressed(_ sender: Any) {
@@ -27,5 +28,12 @@ class AddMovieViewController: UIViewController {
     }
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MovieTable" {
+            guard let movieTVC = segue.destination as? MovieTableViewController else { return }
+            movieTVC.movieController = movieController
+            
+            moviesTableViewController = movieTVC
+        }
+    }
 }
