@@ -59,9 +59,12 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 			ac.addAction(UIAlertAction(title: "ok", style: .default) {
 				[weak self] _ in
 				if let textFields = ac.textFields {
-					let str = textFields[0]
-					print(str)
+					let str = textFields[0].text!
+					if let movie = self!.moviesController?.movies[indexPath.row] {
+						self?.moviesController?.updateMoveName(movie: movie, name: str)
+					}
 				}
+				self?.tableView.reloadData()
 				
 			})
 			self.present(ac, animated: true)
