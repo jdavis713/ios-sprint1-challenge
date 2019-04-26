@@ -13,7 +13,6 @@ protocol MovieTableViewCellDelegate: AnyObject {
 }
 
 class MovieTableViewCell: UITableViewCell {
-	
 	@IBAction func IsSeenButtonAction(_ sender: Any) {
 		delegate?.isSeenButton(for: self)
 	}
