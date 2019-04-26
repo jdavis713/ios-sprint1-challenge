@@ -9,17 +9,14 @@
 import UIKit
 
 
-protocol seenButtonProtocol {
-	func seenButton(for cell: MovieTableViewCell)
+protocol seenButtonDelegate: AnyObject {
+	func seenButtonDelegate(for cell: MovieTableViewCell)
 }
 class MovieTableViewCell: UITableViewCell {
 	
 	@IBAction func IsSeenButtonAction(_ sender: Any) {
-		
-//		guard let m = movie else { return }
-//		movieController?.updateLike(movie: m)
-//		setupCell()
-//		print(m.isSeen)
+		delegate?.seenButtonDelegate(for: self)
+		print("delegate1")
 	}
 	
 	private func setupCell() {
@@ -32,9 +29,8 @@ class MovieTableViewCell: UITableViewCell {
 	@IBOutlet var movieNameLabel: UILabel!
 	@IBOutlet var IsSeenButtonTitle: UIButton!
 	
-	weak var delegate: seenButtonProtocol?
+	weak var delegate: seenButtonDelegate?
 	
-	var movieController: MoviesController?
 	var movie: Movie? {
 		didSet {
 			setupCell()

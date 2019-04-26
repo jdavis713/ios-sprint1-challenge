@@ -29,7 +29,6 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 		
 		if let movie = moviesController?.movies[indexPath.row] {
 			movieCell.movie = movie
-			movieCell.movieController = moviesController
 		}
 		
         return movieCell
@@ -46,4 +45,14 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 	}
 	
 	var moviesController: MoviesController?
+}
+
+extension MoviesTableViewController: seenButtonDelegate {
+	func seenButtonDelegate(for cell: MovieTableViewCell) {
+		guard let movie = cell.movie else { return }
+		moviesController?.updateLike(movie: movie)
+		print("dalegate 2")
+	}
+	
+	
 }
