@@ -16,13 +16,27 @@ class MoviesController {
 	}
 	
 	func deleteMovie(movie: Movie) {
-		guard let i = movies.firstIndex(of: movie) else { return }
-		movies.remove(at: i)
+		if let i = getMovieIndex(movie) {
+			movies.remove(at: i)
+		}
 	}
 	
 	func updateLike(movie: Movie) {
-		guard let i = movies.firstIndex(of: movie) else { return }
-		movies[i].isSeen?.toggle()
+		if let i = getMovieIndex(movie) {
+			movies[i].isSeen?.toggle()
+			
+		}
+	}
+	
+	func updateMoveName(movie: Movie, name: String) {
+		if let i = getMovieIndex(movie) {
+			movies[i].movie = name
+		}
+	}
+	
+	private func getMovieIndex(_ movie: Movie) -> Int? {
+		guard let i = movies.firstIndex(of: movie) else { return nil}
+		return i
 	}
 	
 	init() {
