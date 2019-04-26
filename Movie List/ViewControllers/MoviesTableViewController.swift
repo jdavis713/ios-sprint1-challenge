@@ -55,7 +55,7 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 			action, index in
 			
 			let ac = UIAlertController(title: "Edit Movie", message: nil, preferredStyle: .alert)
-		
+			ac.addTextField()
 			ac.addAction(UIAlertAction(title: "ok", style: .default))
 			self.present(ac, animated: true)
 		})
