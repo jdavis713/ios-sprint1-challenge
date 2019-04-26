@@ -17,6 +17,7 @@
 		E84C0F85227362C50009D06A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C0F84227362C50009D06A /* Movie.swift */; };
 		E84C0F87227363A90009D06A /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C0F86227363A90009D06A /* MoviesController.swift */; };
 		E84C0F89227365BB0009D06A /* MovieListTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C0F88227365BB0009D06A /* MovieListTabBarController.swift */; };
+		E84C0F8B227366C20009D06A /* MovieControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C0F8A227366C20009D06A /* MovieControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E84C0F84227362C50009D06A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E84C0F86227363A90009D06A /* MoviesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesController.swift; sourceTree = "<group>"; };
 		E84C0F88227365BB0009D06A /* MovieListTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTabBarController.swift; sourceTree = "<group>"; };
+		E84C0F8A227366C20009D06A /* MovieControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				E84C0F84227362C50009D06A /* Movie.swift */,
 				E84C0F86227363A90009D06A /* MoviesController.swift */,
+				E84C0F8A227366C20009D06A /* MovieControllerProtocol.swift */,
 				E84C0F83227362880009D06A /* ViewControllers */,
 				E84C0F7E227359560009D06A /* Storyboards */,
 				8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */,
@@ -89,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				E84C0F88227365BB0009D06A /* MovieListTabBarController.swift */,
-				E84C0F8122735E140009D06A /* MoviesTableViewController.swift */,
 				E84C0F7F22735DC20009D06A /* AddMoviesViewController.swift */,
+				E84C0F8122735E140009D06A /* MoviesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84C0F8B227366C20009D06A /* MovieControllerProtocol.swift in Sources */,
 				E84C0F8222735E140009D06A /* MoviesTableViewController.swift in Sources */,
 				E84C0F87227363A90009D06A /* MoviesController.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,

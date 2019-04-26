@@ -17,5 +17,5 @@ class AddMoviesViewController: UIViewController {
 	
 	
 	
-	let moviesController = MoviesController()
+	
 }
