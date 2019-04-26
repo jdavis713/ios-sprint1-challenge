@@ -17,6 +17,7 @@
 		EF8F206322735FBB00274592 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F206222735FBB00274592 /* Movie.swift */; };
 		EF8F20652273609E00274592 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F20642273609E00274592 /* MovieController.swift */; };
 		EF8F20672273643500274592 /* MoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F20662273643500274592 /* MoviePresenter.swift */; };
+		EF8F20692273652200274592 /* MovieTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F20682273652200274592 /* MovieTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EF8F206222735FBB00274592 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EF8F20642273609E00274592 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
 		EF8F20662273643500274592 /* MoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePresenter.swift; sourceTree = "<group>"; };
+		EF8F20682273652200274592 /* MovieTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				EF8F206222735FBB00274592 /* Movie.swift */,
 				EF8F20662273643500274592 /* MoviePresenter.swift */,
 				EF8F20642273609E00274592 /* MovieController.swift */,
+				EF8F20682273652200274592 /* MovieTabBarViewController.swift */,
 				EF8F205E22735EE900274592 /* AddMovieViewController.swift */,
 				EF8F206022735F4C00274592 /* MovieTableViewController.swift */,
 				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
@@ -172,6 +175,7 @@
 				EF8F20672273643500274592 /* MoviePresenter.swift in Sources */,
 				EF8F20652273609E00274592 /* MovieController.swift in Sources */,
 				EF8F205F22735EE900274592 /* AddMovieViewController.swift in Sources */,
+				EF8F20692273652200274592 /* MovieTabBarViewController.swift in Sources */,
 				EF8F206322735FBB00274592 /* Movie.swift in Sources */,
 				EF8F206122735F4C00274592 /* MovieTableViewController.swift in Sources */,
 			);
