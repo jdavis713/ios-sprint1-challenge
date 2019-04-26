@@ -15,8 +15,8 @@ protocol isSeenCellDelegate: AnyObject {
 class MovieTableViewCell: UITableViewCell {
 	
 	@IBAction func IsSeenButtonAction(_ sender: Any) {
+		//delegate not working
 		delegate?.isSeenButton(for: self)
-		
 		
 		movie?.isSeen?.toggle()
 		setupCell()
