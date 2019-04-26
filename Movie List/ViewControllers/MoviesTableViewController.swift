@@ -9,7 +9,10 @@
 import UIKit
 
 class MoviesTableViewController: UITableViewController, MoviesControllerProtocol {
-	var moviesController: MoviesController?
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		tableView.reloadData()
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,6 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
         return moviesController?.movies.count ?? 0
     }
 
-	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
 		
@@ -27,6 +29,7 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 		
 		if let movie = moviesController?.movies[indexPath.row] {
 			movieCell.movie = movie
+			movieCell.movieController = moviesController
 		}
 		
         return movieCell
@@ -42,5 +45,5 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 		tableView.reloadData()
 	}
 	
-
+	var moviesController: MoviesController?
 }

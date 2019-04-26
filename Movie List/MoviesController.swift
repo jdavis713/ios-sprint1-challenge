@@ -19,8 +19,9 @@ class MoviesController {
 		movies.remove(at: i)
 	}
 	
-	func update (movie: Movie, isLiked: Bool?, name: String?) {
-		print("update Movie")
+	func updateLike(movie: Movie) {
+		guard let i = movies.firstIndex(of: movie) else { return }
+		movies[i].isSeen?.toggle()
 	}
 	
 	init() {
