@@ -40,12 +40,27 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
         return movieCell
     }
 	
-	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-		if editingStyle == .delete {
-			guard let movie = moviesController?.movies[indexPath.row] else { return }
-			moviesController?.deleteMovie(movie: movie)
-		}
-		tableView.reloadData()
+//	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//		if editingStyle == .delete {
+
+//		} else if editingStyle == .none {
+//			print("edit")
+//		}
+//	}
+//
+
+	override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+		let delete = UITableViewRowAction(style: .destructive, title: "delete", handler: {
+			action, index in
+			print("Delete button")
+			
+			if let movie = self.moviesController?.movies[indexPath.row] {
+				self.moviesController?.deleteMovie(movie: movie)
+				self.tableView.reloadData()
+			}
+		})
+		
+		return [delete]
 	}
 	
 	var moviesController: MoviesController?
