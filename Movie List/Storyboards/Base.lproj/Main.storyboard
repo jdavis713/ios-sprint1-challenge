@@ -95,6 +95,9 @@
                                     <constraint firstAttribute="width" constant="75" id="Yr1-vk-yVC"/>
                                 </constraints>
                                 <state key="normal" title="Add Movie"/>
+                                <connections>
+                                    <action selector="AddmovieButtonAction:" destination="zXR-8X-vKJ" eventType="touchUpInside" id="jJ6-xx-hWL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,6 +114,9 @@
                         <viewLayoutGuide key="safeArea" id="phe-WE-gOM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add New Movie" image="Plus" id="pzb-H9-Cfb"/>
+                    <connections>
+                        <outlet property="movieTextField" destination="mQD-Jw-DNU" id="OYi-LY-rWJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qi0-Ka-fSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

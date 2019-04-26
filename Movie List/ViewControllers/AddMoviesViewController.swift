@@ -9,19 +9,17 @@
 import UIKit
 
 class AddMoviesViewController: UIViewController, MoviesControllerProtocol {
-	var moviesController: MoviesController?
 	
-	
-	
-	
-	
-
-    override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
 		
     }
 	
+	@IBAction func AddmovieButtonAction(_ sender: Any) {
+	}
 	
 	
+	@IBOutlet var movieTextField: UITextField!
+	var moviesController: MoviesController?
 	
 }
