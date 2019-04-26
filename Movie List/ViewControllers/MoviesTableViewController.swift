@@ -8,13 +8,10 @@
 
 import UIKit
 
-class MoviesTableViewController: UITableViewController, MoviesControllerProtocol, isSeenCellDelegate {
+class MoviesTableViewController: UITableViewController, MoviesControllerProtocol, MovieTableViewCellDelegate {
 	func isSeenButton(for cell: MovieTableViewCell) {
 		print("Delegate")
 	}
-	
-
-	
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
