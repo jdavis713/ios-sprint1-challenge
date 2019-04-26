@@ -17,8 +17,9 @@ class AddMoviesViewController: UIViewController, MoviesControllerProtocol {
 	
 	@IBAction func AddmovieButtonAction(_ sender: Any) {
 		guard let movieText = movieTextField.text else { return }
-		moviesController?.createMovie(movie: movieText)
-		
+		if !movieText.isEmpty {
+			moviesController?.createMovie(movie: movieText)
+		}
 		movieTextField?.text = nil
 	}
 	

@@ -8,23 +8,13 @@
 
 import UIKit
 
-class MoviesTableViewController: UITableViewController, MoviesControllerProtocol, seenButtonDelegate {
-	func seenButtonDelegate(for cell: MovieTableViewCell) {
-		guard let movie = cell.movie else {
-			print("error delegate")
-			return
-			
-		}
-		moviesController?.updateLike(movie: movie)
-		print("dalegate 2")
-	}
-
+class MoviesTableViewController: UITableViewController, MoviesControllerProtocol {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		tableView.delegate = self
-		tableView.dataSource = self
 		tableView.reloadData()
-		
+		for m in moviesController!.movies {
+			print(m)
+		}
 	}
 
     override func viewDidLoad() {
@@ -51,9 +41,8 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 		if editingStyle == .delete {
 			guard let movie = moviesController?.movies[indexPath.row] else { return }
 			moviesController?.deleteMovie(movie: movie)
-		} else if editingStyle == .insert {
-			
 		}
+
 		tableView.reloadData()
 	}
 	
