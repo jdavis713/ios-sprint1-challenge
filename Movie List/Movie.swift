@@ -16,5 +16,5 @@ class Movie {
 	}
 	
 	var movie: String
-	var isSeen: Bool?
+	var isSeen: Bool
 }

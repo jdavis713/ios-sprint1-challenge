@@ -25,6 +25,29 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eEf-Qy-Ac4" id="0fW-xu-k2k">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZZ-AN-IdX">
+                                            <rect key="frame" x="20" y="0.0" width="335" height="43.666666666666664"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD0-68-DhQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="43.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrp-Rr-xmq">
+                                                    <rect key="frame" x="271" y="0.0" width="64" height="43.666666666666664"/>
+                                                    <state key="normal" title="Not Seen"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CZZ-AN-IdX" firstAttribute="leading" secondItem="0fW-xu-k2k" secondAttribute="leading" constant="20" id="0Kn-o2-30p"/>
+                                        <constraint firstAttribute="bottom" secondItem="CZZ-AN-IdX" secondAttribute="bottom" id="1XE-39-kzK"/>
+                                        <constraint firstAttribute="trailing" secondItem="CZZ-AN-IdX" secondAttribute="trailing" constant="20" id="P1h-C3-1gd"/>
+                                        <constraint firstItem="CZZ-AN-IdX" firstAttribute="top" secondItem="0fW-xu-k2k" secondAttribute="top" id="PwY-oL-K32"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -37,7 +60,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPI-P6-WjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="-846"/>
+            <point key="canvasLocation" x="1509.5999999999999" y="-846.05911330049264"/>
         </scene>
         <!--Add New Movie-->
         <scene sceneID="t21-In-Goq">
