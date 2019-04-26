@@ -56,7 +56,14 @@ class MoviesTableViewController: UITableViewController, MoviesControllerProtocol
 			
 			let ac = UIAlertController(title: "Edit Movie", message: nil, preferredStyle: .alert)
 			ac.addTextField()
-			ac.addAction(UIAlertAction(title: "ok", style: .default))
+			ac.addAction(UIAlertAction(title: "ok", style: .default) {
+				[weak self] _ in
+				if let textFields = ac.textFields {
+					let str = textFields[0]
+					print(str)
+				}
+				
+			})
 			self.present(ac, animated: true)
 		})
 		
