@@ -13,7 +13,7 @@
         <!--Movies-->
         <scene sceneID="VNp-jG-oij">
             <objects>
-                <tableViewController id="eHE-0x-CE7" sceneMemberID="viewController">
+                <tableViewController id="eHE-0x-CE7" customClass="MoviesTableViewController" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WEZ-vr-Z9D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,18 +42,49 @@
         <!--Add New Movie-->
         <scene sceneID="t21-In-Goq">
             <objects>
-                <viewController id="zXR-8X-vKJ" sceneMemberID="viewController">
+                <viewController id="zXR-8X-vKJ" customClass="AddMoviesViewController" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ox5-Em-2tz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new movie to the list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNW-9t-HYt">
+                                <rect key="frame" x="20" y="44" width="335" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQD-Jw-DNU">
+                                <rect key="frame" x="20" y="85" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvb-vH-Dbb">
+                                <rect key="frame" x="150" y="136" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Yr1-vk-yVC"/>
+                                </constraints>
+                                <state key="normal" title="Add Movie"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NNW-9t-HYt" firstAttribute="leading" secondItem="phe-WE-gOM" secondAttribute="leading" constant="20" id="JzR-HC-sXT"/>
+                            <constraint firstItem="NNW-9t-HYt" firstAttribute="top" secondItem="phe-WE-gOM" secondAttribute="top" id="QbT-qf-ghg"/>
+                            <constraint firstItem="mQD-Jw-DNU" firstAttribute="leading" secondItem="phe-WE-gOM" secondAttribute="leading" constant="20" id="Zl3-Sl-Z0k"/>
+                            <constraint firstItem="lvb-vH-Dbb" firstAttribute="top" secondItem="mQD-Jw-DNU" secondAttribute="bottom" constant="21" id="bd7-yn-gLc"/>
+                            <constraint firstItem="phe-WE-gOM" firstAttribute="trailing" secondItem="mQD-Jw-DNU" secondAttribute="trailing" constant="20" id="bka-qJ-pzZ"/>
+                            <constraint firstItem="mQD-Jw-DNU" firstAttribute="top" secondItem="NNW-9t-HYt" secondAttribute="bottom" constant="8" id="gEZ-V5-shu"/>
+                            <constraint firstItem="lvb-vH-Dbb" firstAttribute="centerX" secondItem="phe-WE-gOM" secondAttribute="centerX" id="oRN-5A-ObQ"/>
+                            <constraint firstItem="phe-WE-gOM" firstAttribute="trailing" secondItem="NNW-9t-HYt" secondAttribute="trailing" constant="20" id="vku-If-llh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="phe-WE-gOM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add New Movie" image="Plus" id="pzb-H9-Cfb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qi0-Ka-fSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="-1594"/>
+            <point key="canvasLocation" x="1565.5999999999999" y="-1594.5812807881773"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Des-io-H8H">
