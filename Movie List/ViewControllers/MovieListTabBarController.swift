@@ -1,5 +1,5 @@
 //
-//  AddMoviesViewController.swift
+//  MovieListTabBarController.swift
 //  Movie List
 //
 //  Created by Hector Steven on 4/26/19.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class AddMoviesViewController: UIViewController {
+class MovieListTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+
+        // Do any additional setup after loading the view.
     }
-	
-	
-	
-	let moviesController = MoviesController()
+    
+
 }

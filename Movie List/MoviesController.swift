@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MovieController {
+class MoviesController {
 	
 	func createMovie (movie: String){
 		let movie = Movie(movie: movie)

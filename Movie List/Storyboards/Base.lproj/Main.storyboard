@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1565.5999999999999" y="-1594.5812807881773"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Movie List Tab Bar Controller-->
         <scene sceneID="Des-io-H8H">
             <objects>
-                <tabBarController id="yU4-Pi-Oc5" sceneMemberID="viewController">
+                <tabBarController id="yU4-Pi-Oc5" customClass="MovieListTabBarController" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BDQ-TK-eoU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
