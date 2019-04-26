@@ -10,9 +10,24 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
 	
+	@IBAction func IsSeenButtonAction(_ sender: Any) {
+	}
+	
+	private func setupCell() {
+		guard let movie = movie else { return }
+		movieNameLabel?.text = movie.movie
+		let buttonTitle = movie.isSeen ? "Seen" : "Not Seen"
+		IsSeenButtonTitle.setTitle(buttonTitle, for: .normal)
+	}
+	
 	@IBOutlet var movieNameLabel: UILabel!
 	@IBOutlet var IsSeenButtonTitle: UIButton!
 	
-	@IBAction func IsSeenButtonAction(_ sender: Any) {
+	
+	var movie: Movie? {
+		didSet {
+			setupCell()
+		}
 	}
+	
 }
