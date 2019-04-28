@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MovieDelegate {
+    func newMovieWasAdded(with movie: Movie)
+}
+
 class AddMovieViewController: UIViewController, MoviePresenter {
     
     var movieController: MovieController?
@@ -25,17 +29,16 @@ class AddMovieViewController: UIViewController, MoviePresenter {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MovieTable" {
-            guard let movieTVC = segue.destination as? MovieTableViewController else { return }
-            movieTVC.movieController = movieController
-            
-            moviesTableViewController = movieTVC
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "MovieTable" {
+//            guard let movieTVC = segue.destination as? MovieTableViewController else { return }
+//            movieTVC.movieController = movieController
+//
+//            moviesTableViewController = movieTVC
+//        }
+//    }
 }
 

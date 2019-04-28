@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol MovieDelegate {
-    func newMovieWasAdded(with movie: Movie)
-}
-
 class MovieTableViewController: UITableViewController {
 
     var movieController: MovieController?
