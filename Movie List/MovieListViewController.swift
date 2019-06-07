@@ -53,4 +53,5 @@ import UIKit
         
         @IBOutlet var tableView: UITableView!
         var movieListController = MovieListController()
+        
 }
