@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467E198C20F5165800E7FF73 /* AppDelegate.swift */; };
 		467E199420F5165900E7FF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467E199320F5165900E7FF73 /* Assets.xcassets */; };
-		8BDE68B122AAC4910019A8F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BDE68AF22AAC4910019A8F6 /* Main.storyboard */; };
+		8BDE68B322AAC73F0019A8F6 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE68B222AAC73F0019A8F6 /* MovieList.swift */; };
+		8BDE68B522AAC74A0019A8F6 /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE68B422AAC74A0019A8F6 /* MovieListController.swift */; };
+		8BDE68B822AAC8110019A8F6 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE68B722AAC8110019A8F6 /* MovieListViewController.swift */; };
+		8BDE68BA22AAC81C0019A8F6 /* AddNewMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE68B922AAC81C0019A8F6 /* AddNewMovieViewController.swift */; };
+		8BDE68BC22AAC8320019A8F6 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE68BB22AAC8320019A8F6 /* MovieListTableViewCell.swift */; };
+		8BDE68BF22AAD7BB0019A8F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BDE68BD22AAD7BB0019A8F6 /* Main.storyboard */; };
 		8E5B3916218CDD4D00AB9C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */; };
 		8E5B3917218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */; };
 /* End PBXBuildFile section */
@@ -19,7 +24,12 @@
 		467E198C20F5165800E7FF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		467E199320F5165900E7FF73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		467E199820F5165900E7FF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BDE68B022AAC4910019A8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../Sprints/MovieList2-master/MovieList/MovieList/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		8BDE68B222AAC73F0019A8F6 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		8BDE68B422AAC74A0019A8F6 /* MovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
+		8BDE68B722AAC8110019A8F6 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		8BDE68B922AAC81C0019A8F6 /* AddNewMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMovieViewController.swift; sourceTree = "<group>"; };
+		8BDE68BB22AAC8320019A8F6 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
+		8BDE68BE22AAD7BB0019A8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../Sprints/MovieList2-master/MovieList 2/MovieList/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LambdaLogoAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +66,12 @@
 			children = (
 				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
 				467E199320F5165900E7FF73 /* Assets.xcassets */,
-				8BDE68AF22AAC4910019A8F6 /* Main.storyboard */,
+				8BDE68BD22AAD7BB0019A8F6 /* Main.storyboard */,
+				8BDE68B222AAC73F0019A8F6 /* MovieList.swift */,
+				8BDE68B422AAC74A0019A8F6 /* MovieListController.swift */,
+				8BDE68B722AAC8110019A8F6 /* MovieListViewController.swift */,
+				8BDE68B922AAC81C0019A8F6 /* AddNewMovieViewController.swift */,
+				8BDE68BB22AAC8320019A8F6 /* MovieListTableViewCell.swift */,
 				467E199820F5165900E7FF73 /* Info.plist */,
 				8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */,
 				8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */,
@@ -126,7 +141,7 @@
 				8E5B3916218CDD4D00AB9C2B /* LaunchScreen.storyboard in Resources */,
 				467E199420F5165900E7FF73 /* Assets.xcassets in Resources */,
 				8E5B3917218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets in Resources */,
-				8BDE68B122AAC4910019A8F6 /* Main.storyboard in Resources */,
+				8BDE68BF22AAD7BB0019A8F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,17 +152,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BDE68B322AAC73F0019A8F6 /* MovieList.swift in Sources */,
+				8BDE68B522AAC74A0019A8F6 /* MovieListController.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,
+				8BDE68BA22AAC81C0019A8F6 /* AddNewMovieViewController.swift in Sources */,
+				8BDE68BC22AAC8320019A8F6 /* MovieListTableViewCell.swift in Sources */,
+				8BDE68B822AAC8110019A8F6 /* MovieListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8BDE68AF22AAC4910019A8F6 /* Main.storyboard */ = {
+		8BDE68BD22AAD7BB0019A8F6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8BDE68B022AAC4910019A8F6 /* Base */,
+				8BDE68BE22AAD7BB0019A8F6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
